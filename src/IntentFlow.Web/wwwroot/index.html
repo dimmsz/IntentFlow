@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IntentFlow</title><link rel="stylesheet" href="/app.css"></head>
+<body><main class="container"><h1>IntentFlow</h1><p class="lead">発話から「何をしたいのか」を抽出する実験アプリ</p>
+<section class="card"><label for="text">発話内容</label><div class="input-row"><textarea id="text" rows="3" placeholder="例：トイレットペーパーと卵が切れそう"></textarea><button id="mic">🎙️</button></div><div class="actions"><button id="parse">解析する</button><span id="speechStatus"></span></div></section>
+<section class="card"><h2>解析結果</h2><pre id="result">ここに結果を表示します。</pre></section>
+<section class="card"><h2>買い物リスト</h2><ul id="shopping"></ul></section></main><script src="/app.js"></script></body></html>
