@@ -1,7 +1,7 @@
 const text=document.querySelector("#text"),result=document.querySelector("#result"),shopping=document.querySelector("#shopping"),status=document.querySelector("#speechStatus");
 const items=JSON.parse(localStorage.getItem("intentflow.shopping")||"[]");
 const aliases=new Map([["たまご","卵"],["お米","米"],["しょうゆ","醤油"],["みそ","味噌"]]);
-const known=["トイレットペーパー","ティッシュ","キッチンペーパー","マヨネーズ","ケチャップ","醤油","しょうゆ","味噌","みそ","卵","たまご","牛乳","コーヒー","パン","米","お米","洗剤","食器用洗剤","シャンプー","リンス","歯磨き粉","歯ブラシ","ゴミ袋","ラップ","アルミホイル"];
+const known=["トイレットペーパー","ティッシュ","キッチンペーパー","マヨネーズ","ケチャップ","醤油","しょうゆ","味噌","みそ","卵","たまご","牛乳","コーヒー","パン","米","お米","洗剤","食器用洗剤","シャンプー","リンス","歯磨き粉","歯ブラシ","ゴミ袋","ラップ","アルミホイル","シリコンスプレー"];
 const triggers=["買わなきゃ","買わないと","買って","買う","購入","なくなった","なくなりそう","切れた","切れそう","足りない","足りなくなりそう","必要"];
 function normalize(x){return aliases.get(x)||x}
 function extract(x){const r=[];for(const i of known)if(x.includes(i)){const n=normalize(i);if(!r.includes(n))r.push(n)}return r}
